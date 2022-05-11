@@ -1,0 +1,25 @@
+{
+  "name": "landing001",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincejs77/landing001.git"
+  },
+  "keywords": [
+    "landing"
+  ],
+  "author": "vincejs77",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vincejs77/landing001/issues"
+  },
+  "homepage": "https://github.com/vincejs77/landing001#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}
