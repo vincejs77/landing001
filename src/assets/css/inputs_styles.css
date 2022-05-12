@@ -40,6 +40,14 @@ body {
 	display: none !important;
 }
 
+.darkMode #nav--section {
+	@apply bg-cblack z-50 border border-cgray-100;
+}
+
+.lightMode #nav--section {
+	@apply bg-white z-50;
+}
+
 .cnav--ul__li:focus-within {
 	@apply opacity-100 no-underline;
 }
@@ -47,11 +55,15 @@ body {
 	@apply opacity-100 underline;
 }
 .cnav--ul {
-	@apply bg-white transition-all duration-300 ease-out pt-8 fixed z-50 top-0 left-0 flex-wrap items-center w-full h-full p-0 mt-20 space-y-5 leading-6;
+	@apply transition-all duration-300 ease-out pt-8 sm:pt-0 fixed z-50 top-0 left-0 flex-wrap items-center w-full h-full p-0 mt-20 space-y-5 leading-6;
 }
 
 .darkMode .cnav--ul {
 	@apply bg-cblack;
+}
+
+.lightMode .cnav--ul {
+	@apply bg-white;
 }
 
 .btn--primary,
