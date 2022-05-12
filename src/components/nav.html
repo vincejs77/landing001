@@ -1,16 +1,16 @@
 <div id="nav--section" class="fixed w-full top-0 left-0 right-0">
 	<section class="w-full" x-data="{ showMenu: false }">
 		<nav class="box-border flex items-center justify-between w-full h-35 px-3 md:px-6 mx-auto my-0 py-4 leading-6 max-w-6xl">
-			<a @click="showMenu = !showMenu" href="/index.html" class="flex items-center font-medium text-gray-900 lg:w-auto title-font lg:items-center lg:justify-center md:mb-0">
+			<a @click="showMenu = !showMenu" href="/" class="flex items-center font-medium text-gray-900 lg:w-auto title-font lg:items-center lg:justify-center md:mb-0">
 				<span class="text-xl font-black leading-none text-gray-900 select-none">
-					<img src="./public/img/logo.png" alt="IRAGI SOLUTIONS" class="sm:w-[180px] w-[120px] --light" />
-					<img src="./public/img/logo_white.svg" alt="IRAGI SOLUTIONS" class="sm:w-[180px] w-[120px] --dark" />
+					<img src="https://vincejs77.github.io/landing001/public/img/logo.png" alt="IRAGI SOLUTIONS" class="sm:w-[180px] w-[120px] --light" />
+					<img src="https://vincejs77.github.io/landing001/public/img/logo_white.svg" alt="IRAGI SOLUTIONS" class="sm:w-[180px] w-[120px] --dark" />
 				</span>
 			</a>
 			<div class="relative flex list-none lg:block" :class="{'flex fixed': showMenu, 'hidden': !showMenu }">
 				<ul class="cnav--ul lg:space-x-8 lg:static lg:w-auto lg:flex lg:space-y-0 lg:mt-0">
 					<li class="box-border w-full my-3 text-lg text-center lg:w-auto">
-						<a href="/src/services.html" class="cnav--ul__li">Nos services</a>
+						<a href="./src/services.html" class="cnav--ul__li">Nos services</a>
 					</li>
 					<!-- <li class="box-border w-full my-3 text-lg text-center lg:w-auto">
 						<a href="#sect2" class="cnav--ul__li">Nos clients</a>
