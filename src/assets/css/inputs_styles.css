@@ -8,6 +8,10 @@
 	}
 }
 
+.darkMode .menu--btn {
+	@apply text-white;
+}
+
 .cfild--input {
 	@apply bg-cyellow w-full mt-3 py-3 border-b border-cblack placeholder-cgray-900 placeholder-italic;
 }
@@ -43,7 +47,11 @@ body {
 	@apply opacity-100 underline;
 }
 .cnav--ul {
-	@apply fixed top-0 left-0 z-10 flex-wrap items-center w-full h-full p-0 mt-20 space-y-5 leading-6;
+	@apply bg-white transition-all duration-300 ease-out pt-8 fixed z-50 top-0 left-0 flex-wrap items-center w-full h-full p-0 mt-20 space-y-5 leading-6;
+}
+
+.darkMode .cnav--ul {
+	@apply bg-cblack;
 }
 
 .btn--primary,
