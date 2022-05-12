@@ -12,212 +12,166 @@
 		<link rel="manifest" href="./public/site.webmanifest" />
 
 		<link rel="stylesheet" href="./public/css/outputs_styles.css" />
-
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 		<script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
 	</head>
 	<body>
 		<!-- Section 1 -->
-		<section class="w-full bg-white" x-data="{ showMenu: false }">
-			<nav class="box-border flex items-center justify-between w-full h-35 px-3 md:px-6 mx-auto my-0 py-4 leading-6 max-w-6xl">
-				<a href="#_" class="flex items-center font-medium text-gray-900 lg:w-auto title-font lg:items-center lg:justify-center md:mb-0">
-					<span class="text-xl font-black leading-none text-gray-900 select-none">
-						<img src="./public/img/logo.png" alt="IRAGI SOLUTIONS" class="sm:w-[180px] w-[120px]" />
-					</span>
-				</a>
-				<div class="relative flex list-none lg:block" :class="{'flex fixed': showMenu, 'hidden': !showMenu }">
-					<ul class="cnav--ul lg:space-x-8 lg:static lg:w-auto lg:flex lg:space-y-0 lg:mt-0">
-						<li class="box-border w-full my-3 text-lg text-center lg:w-auto">
-							<a href="#_" class="cnav--ul__li">Nos services</a>
-						</li>
-						<li class="box-border w-full my-3 text-lg text-center lg:w-auto">
-							<a href="#_" class="cnav--ul__li">Nos clients</a>
-						</li>
-						<li class="box-border w-full my-3 text-lg text-center lg:w-auto">
-							<a href="#_" class="cnav--ul__li">Nos partenaires</a>
-						</li>
-						<li class="box-border w-full my-3 text-lg text-center lg:w-auto">
+		<section class="bg-cblack relative darkMode">
+			<div class="nav--section w-full"></div>
+		</section>
+
+		<section class="bg-cblack w-full" id="sect1">
+			<div class="max-w-6xl mx-auto pt-16 pb-24 px-3 sm:px-6">
+				<div class="flex justify-between items-center">
+					<div class="max-w-[400px]">
+						<h1 class="ctitle--h1 md:text-3xl lg:text-4xl xl:text-4xl text-white">
+							“Notre fierté est de faire en sorte que le monde vous voit sous votre meilleur
+
+							<span class="relative inline-block">
+								<span class="relative z-10 p-4 text-cyellow">jour.</span>
+								<svg class="w-full fill-current opacity-50 z-0 rotate-12 -mt-2 text-yellow-300 absolute right-0 top-0" viewBox="0 0 386 189" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M91.315 32.349c-43.9 18.5-66.3 38.1-72.8 63.8-1.3 5.3-2.9 8.5-6.1 12.5-19.2 24.1-15.9 50.4 8.3 66.5 25.5 16.9 97.2 17.9 174 2.4 11-2.2 28.8-5.4 39.5-7 133.3-20.1 177.8-79 137.4-119.6-24.6-24.8-60.9-35.4-121.4-35.8-57.6-.3-134.1 23.6-189.2 56.5-14.4 8.6-16.1 5.2-11.9.8 14.8-15.6 54.7-35.9 96.4-48.2 37.2-11 54.4-15.5 82.3-15.7 10.9-.1 17.2-7.6.4-8.5-17.8-.8-89.2 12.2-136.9 32.3Zm268.1 74.9c-17.7 22.2-58.5 38.7-124.6 50.2-220.9 38.4-203.5-44.7-203.5-44.7.2-.1 69.7-68.8 206.5-85.5 67.3-8.3 174.6 13.5 121.6 80Zm-263.8 67.4c22.8 3.1-4 3.7-37.8.9-63-5.2-44.8-41.5-39-47.5 18.8 27.1 44.9 42.3 76.8 46.6Z"
+									></path>
+								</svg>
+							</span>
+							”
+						</h1>
+						<p class="text-cwhite mt-8">Vous aider à simplifier la vie au maximum est notre objectif en vous proposant des services de conseil et d’assistance technique</p>
+						<div class="mt-8">
 							<a href="#_" class="btn--primary btn--primary__y lg:py-3 lg:px-8">Contactez-nous</a>
-						</li>
-					</ul>
-				</div>
-				<div @click="showMenu = !showMenu" class="absolute right-0 flex flex-col items-center justify-center w-10 h-10 mr-5 -mt-1 rounded-full cursor-pointer lg:hidden hover:bg-gray-100">
-					<svg class="w-6 h-6 text-gray-700" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" x-cloak="">
-						<path d="M4 6h16M4 12h16M4 18h16"></path>
-					</svg>
-					<svg class="w-6 h-6 text-gray-700" x-show="showMenu" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" x-cloak="">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-					</svg>
-				</div>
-			</nav>
-		</section>
-
-		<section class="w-full bg-cgray-100">
-			<div class="box-border flex-grow w-full mx-auto leading-6 px-3 md:px-6 max-w-6xl sm:py-24 py-16">
-				<div class="relative w-full leading-6 text-center lg:flex-grow-0 lg:flex-shrink-0">
-					<p class="mb-2"><span class="text-cgreen text-sm">./home/services</span></p>
-					<h1 class="ctitle--h1 md:text-3xl lg:text-4xl xl:text-4xl">Nos services</h1>
-				</div>
-			</div>
-		</section>
-
-		<section class="w-full bg-cblack-800">
-			<div class="max-w-6xl mx-auto px-3 md:px-6 py-20 sm:py-28 space-y-8 sm:space-y-16 text-left">
-				<div class="md:grid md:grid-cols-4 md:gap-8 w-full">
-					<div class="gri col-span-1 flex justify-items-center">
-						<img src="./public/img/service1.svg" alt="Conseil en communication" class="sm:w-[140px] w-[100px]" />
-					</div>
-					<div class="col-span-3 sm:-ml-16">
-						<h2 class="text text-cgreen font-extrabold text-2xl mb-4 mt-6 sm:mt-0">Falicitation d’affaires</h2>
-						<p class="text-cgray">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</p>
-					</div>
-				</div>
-				<div class="md:grid md:grid-cols-4 md:gap-8 w-full">
-					<div class="gri col-span-1 flex justify-items-center md:-m-6">
-						<img src="./public/img/service2.svg" alt="Conseil en communication" class="sm:w-[180px] w-[130px]" />
-					</div>
-					<div class="col-span-3 sm:-ml-16">
-						<h2 class="text text-cgreen font-extrabold text-2xl mb-4 mt-6 sm:mt-0">Conseil en communication</h2>
-						<p class="text-cgray">De tout ce qui passeeeee ouiiiiiiiii Lorem ipsum dolor sit amet, takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-					</div>
-				</div>
-				<div class="md:grid md:grid-cols-4 md:gap-8 w-full">
-					<div class="gri col-span-1 flex justify-items-center">
-						<img src="./public/img/service3.svg" alt="Conseil en communication" class="sm:w-[130px] w-[110px]" />
-					</div>
-					<div class="col-span-3 sm:-ml-16">
-						<h2 class="text text-cgreen font-extrabold text-2xl mb-4 mt-6 sm:mt-0">Conseil en communication</h2>
-						<p class="text-cgray">Lorem ipsum dolor sit amet, takimata sanctus est Lorem ipsum dolor de la verture de tout ce qui se passe dans la mesure du tout sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="w-full bg-cyellow">
-			<div class="max-w-6xl mx-auto px-3 md:px-6 sm:py-24 py-16 space-y-16">
-				<div class="sm:grid sm:grid-cols-3">
-					<div class="col-span-1">
-						<h1 class="ctitle--h1 md:text-3xl lg:text-4xl xl:text-4xl">Nous-contacter</h1>
-					</div>
-					<div class="col-span-2 w-full sm:flex sm:justify-between">
-						<form action="contactUs__submit" method="get" class="w-full sm:flex sm:justify-between space-y-0 sm:space-y-4 sm:space-x-2">
-							<div class="form--group">
-								<input name="uerEmail" type="email" class="cfild--input" placeholder="Tapez votre adresse mail ici" />
-							</div>
-							<div>
-								<button type="submit" href="#_" class="btn--primary btn--primary__b lg:py-3 lg:px-8 w-full sm:mt-0 mt-4">Suivant</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="asFooter">
-			<div class="max-w-6xl mx-auto px-3 md:px-6 sm:py-24 py-16">
-				<div class="grid md:grid-cols-4 w-full">
-					<div class="col-span-2 sm:flex sm:justify-between">
-						<div class="col-span-1">
-							<a href="#">
-								<img src="./public/img/logo_gray.svg" alt="IRAGI SOLUTIONS" width="120px" class="-mt-4" />
+							<a href="#_" class="btn--segondary btn--segondary__y lg:py-3 lg:px-8">
+								<div class="flex justify-center">
+									<span>En savoir plus</span>
+									<span class="my-auto ml-3">
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</span>
+								</div>
 							</a>
 						</div>
-						<div class="col-span-1 sm:mt-0 mt-8">
-							<h3 class="font-semibold">
-								Nos réseaux sociaux <br />
-								<p class="h-1 w-6 mt-2 bg-cyellow"></p>
-							</h3>
-							<ul class="flex justify-left mt-6 space-x-8">
-								<li>
-									<a href="http://" target="_blank" rel="noopener noreferrer">
-										<svg width="28" height="28" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M16.012 7.98508C14.3975 7.98508 12.8193 8.46383 11.4769 9.36079C10.1345 10.2578 9.0882 11.5326 8.47036 13.0242C7.85253 14.5158 7.69087 16.1571 8.00584 17.7406C8.32081 19.3241 9.09826 20.7786 10.2399 21.9202C11.3815 23.0618 12.836 23.8393 14.4195 24.1542C16.0029 24.4692 17.6442 24.3075 19.1358 23.6897C20.6274 23.0719 21.9023 22.0256 22.7993 20.6832C23.6962 19.3408 24.175 17.7626 24.175 16.1481C24.1767 15.0756 23.9667 14.0134 23.5571 13.0222C23.1475 12.0311 22.5463 11.1305 21.7879 10.3721C21.0296 9.6138 20.129 9.01258 19.1379 8.60296C18.1467 8.19334 17.0845 7.98337 16.012 7.98508V7.98508ZM16.012 21.4551C14.9624 21.4551 13.9363 21.1438 13.0636 20.5607C12.1908 19.9775 11.5106 19.1487 11.109 18.179C10.7073 17.2093 10.6022 16.1422 10.807 15.1127C11.0117 14.0833 11.5172 13.1377 12.2594 12.3955C13.0016 11.6533 13.9472 11.1478 14.9766 10.943C16.0061 10.7383 17.0732 10.8434 18.0429 11.245C19.0126 11.6467 19.8415 12.3269 20.4246 13.1997C21.0077 14.0724 21.319 15.0985 21.319 16.1481C21.3163 17.5548 20.7564 18.9031 19.7617 19.8978C18.767 20.8925 17.4187 21.4524 16.012 21.4551V21.4551ZM26.412 7.65508C26.412 8.03086 26.3006 8.39821 26.0918 8.71066C25.883 9.02311 25.5863 9.26664 25.2391 9.41045C24.8919 9.55425 24.5099 9.59188 24.1413 9.51857C23.7728 9.44526 23.4342 9.2643 23.1685 8.99858C22.9028 8.73286 22.7218 8.39431 22.6485 8.02575C22.5752 7.65718 22.6128 7.27516 22.7566 6.92798C22.9004 6.5808 23.144 6.28406 23.4564 6.07528C23.7689 5.86651 24.1362 5.75508 24.512 5.75508C25.0152 5.75508 25.4979 5.9547 25.8541 6.31016C26.2103 6.66561 26.4109 7.14786 26.412 7.65108V7.65508ZM31.818 9.58708C31.8704 7.11186 30.9465 4.71546 29.246 2.91608C27.4437 1.22046 25.0501 0.296387 22.576 0.341077C19.948 0.191077 12.069 0.191077 9.43999 0.341077C6.96682 0.291771 4.5725 1.21203 2.76899 2.90508C1.07174 4.70643 0.148646 7.10158 0.197993 9.57608C0.0489927 12.2051 0.0489927 20.0831 0.197993 22.7121C0.145575 25.1873 1.0695 27.5837 2.76999 29.3831C4.5739 31.0764 6.96724 31.9991 9.44099 31.9551C12.07 32.1041 19.948 32.1041 22.577 31.9551C25.0522 32.0075 27.4486 31.0836 29.248 29.3831C30.9428 27.5801 31.8658 25.1861 31.82 22.7121C31.969 20.0831 31.969 12.2121 31.82 9.58308L31.818 9.58708ZM28.418 25.5361C28.1478 26.2209 27.7398 26.8428 27.2193 27.3633C26.6987 27.8839 26.0768 28.2919 25.392 28.5621C23.292 29.3931 18.323 29.2011 16.007 29.2011C13.691 29.2011 8.70699 29.3861 6.62199 28.5621C5.93776 28.2909 5.31654 27.882 4.79687 27.3608C4.2772 26.8395 3.87016 26.2171 3.60099 25.5321C2.76999 23.4321 2.96199 18.4631 2.96199 16.1471C2.96199 13.8311 2.77699 8.84708 3.60099 6.76208C3.87118 6.0773 4.2792 5.45535 4.79973 4.93482C5.32027 4.41428 5.94222 4.00626 6.62699 3.73608C8.72699 2.90508 13.696 3.09708 16.012 3.09708C18.328 3.09708 23.312 2.91208 25.397 3.73608C26.0818 4.00626 26.7037 4.41428 27.2243 4.93482C27.7448 5.45535 28.1528 6.0773 28.423 6.76208C29.254 8.86208 29.062 13.8311 29.062 16.1471C29.062 18.4631 29.254 23.4441 28.423 25.5321L28.418 25.5361Z"
-												fill="#009C98"
-											/>
+					</div>
+					<div class="">
+						<img src="./public/img/contents/hero1.svg" alt="IRAGI SERVICES hero1.svg" class="w-[1000px] ml-16" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-cgreen w-full" id="sect2">
+			<div class="max-w-6xl mx-auto pt-16 pb-24 px-3 sm:px-6">
+				<div class="flex justify-center">
+					<h1 class="ctitle--h1 md:text-3xl lg:text-4xl xl:text-4xl text-white">Nos services</h1>
+				</div>
+				<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12">
+					<div class="cbox--services">
+						<img src="./public/img/service1.svg" alt="Conseil en communication" class="sm:w-[75px] w-[80px] mx-auto" />
+						<p class="mt-6 text-xl font-bold">Conseil en communication</p>
+						<div class="flex justify-center">
+							<a href="#_" class="btn--segondary hover:underline opacity-80 lg:py-3 lg:px-8">
+								<div class="flex justify-center">
+									<span>En savoir plus</span>
+									<span class="my-auto ml-3">
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
 										</svg>
-									</a>
-								</li>
-								<li>
-									<a href="http://" target="_blank" rel="noopener noreferrer">
-										<svg width="28" height="28" viewBox="0 0 37 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M32.721 7.59108C32.744 7.91408 32.744 8.23708 32.744 8.56008C32.744 18.4151 25.244 29.7701 11.534 29.7701C7.47546 29.7811 3.50013 28.6195 0.0859985 26.4251C0.683692 26.4908 1.28472 26.5215 1.886 26.5171C5.24124 26.5255 8.50153 25.4035 11.141 23.3321C9.58544 23.3037 8.07756 22.7903 6.82798 21.8634C5.57839 20.9365 4.64949 19.6425 4.171 18.1621C4.63678 18.2357 5.10745 18.2741 5.579 18.2771C6.24107 18.2751 6.90026 18.1898 7.541 18.0231C5.85292 17.6817 4.33509 16.7664 3.24535 15.4328C2.1556 14.0991 1.56116 12.4293 1.563 10.7071V10.6151C2.59611 11.1915 3.75082 11.5157 4.933 11.5611C3.35058 10.5058 2.23058 8.88631 1.80166 7.03328C1.37273 5.18024 1.66722 3.23337 2.625 1.59008C4.49756 3.89463 6.83357 5.77989 9.48156 7.12361C12.1296 8.46733 15.0304 9.23951 17.996 9.39008C17.8762 8.82855 17.8142 8.25623 17.811 7.68208C17.813 6.18729 18.2638 4.72754 19.1051 3.49199C19.9464 2.25644 21.1394 1.30204 22.5295 0.752464C23.9196 0.20289 25.4427 0.0834775 26.9015 0.409699C28.3603 0.73592 29.6874 1.49274 30.711 2.58208C32.3803 2.2606 33.9811 1.65155 35.442 0.782082C34.8861 2.50466 33.721 3.96529 32.165 4.89008C33.6455 4.72158 35.0925 4.33261 36.458 3.73608C35.4373 5.2219 34.1732 6.52486 32.719 7.59008L32.721 7.59108Z"
-												fill="#009C98"
-											/>
-										</svg>
-									</a>
-								</li>
-								<li>
-									<a href="http://" target="_blank" rel="noopener noreferrer">
-										<svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M35.324 18.1061C35.3233 14.7391 34.358 11.4429 32.5422 8.60756C30.7264 5.77221 28.1362 3.51652 25.0783 2.1075C22.0204 0.698488 18.6228 0.195161 15.2877 0.657108C11.9526 1.11905 8.81966 2.52693 6.25984 4.71406C3.70002 6.90119 1.82047 9.776 0.843705 12.9981C-0.133058 16.2203 -0.166133 19.6548 0.748395 22.8952C1.66292 26.1355 3.48676 29.046 6.00398 31.282C8.52121 33.518 11.6264 34.986 14.952 35.5121V23.1991H10.477V18.1061H14.953V14.2251C14.953 9.81008 17.582 7.37108 21.608 7.37108C22.9293 7.38949 24.2475 7.50446 25.552 7.71508V12.0491H23.324C22.9455 11.9988 22.5605 12.0343 22.1976 12.153C21.8347 12.2717 21.5031 12.4704 21.2274 12.7346C20.9517 12.9988 20.7389 13.3216 20.6049 13.6791C20.4708 14.0367 20.4189 14.4198 20.453 14.8001V18.1071H25.344L24.563 23.2001H20.463V35.5121C24.6063 34.8542 28.3791 32.7399 31.1031 29.5494C33.8271 26.3589 35.3238 22.3013 35.324 18.1061V18.1061Z"
-												fill="#009C98"
-											/>
-										</svg>
-									</a>
-								</li>
-								<li>
-									<a href="http://" target="_blank" rel="noopener noreferrer">
-										<svg width="28" height="28" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M7.21 32.0551H0.612001V10.8061H7.212L7.21 32.0551ZM3.907 7.90808C3.14753 7.91163 2.40407 7.68989 1.77062 7.27091C1.13717 6.85193 0.642186 6.25452 0.348265 5.55422C0.0543441 4.85392 -0.0253154 4.0822 0.11936 3.33663C0.264035 2.59106 0.626548 1.90513 1.16106 1.36559C1.69556 0.826046 2.37806 0.457119 3.12224 0.30546C3.86642 0.153802 4.63886 0.226223 5.34188 0.513566C6.0449 0.800909 6.64693 1.29027 7.07183 1.91976C7.49674 2.54926 7.72543 3.29061 7.729 4.05008C7.73009 5.0674 7.32891 6.04388 6.61294 6.7666C5.89697 7.48931 4.92428 7.89963 3.907 7.90808V7.90808ZM31.907 32.0561H25.322V21.7111C25.322 19.2461 25.272 16.0841 21.891 16.0841C18.46 16.0841 17.935 18.7621 17.935 21.5331V32.0551H11.343V10.8061H17.672V13.7061H17.764C18.3968 12.6229 19.3117 11.7317 20.4111 11.1274C21.5106 10.5232 22.7533 10.2286 24.007 10.2751C30.685 10.2751 31.913 14.6751 31.913 20.3841V32.0551L31.907 32.0561Z"
-												fill="#009C98"
-											/>
-										</svg>
-									</a>
-								</li>
-							</ul>
+									</span>
+								</div>
+							</a>
 						</div>
 					</div>
-					<div class="col-span-2 sm:flex sm:justify-between">
-						<div class="d col-span-1 sm:ml-16 sm:mt-0 mt-8">
-							<div>
-								<h3 class="font-semibold">
-									Lien utiles <br />
-									<p class="h-1 w-6 mt-2 bg-cyellow"></p>
-								</h3>
-								<ul class="mt-4 space-y-2">
-									<li><a href="" class="cnav--ul__li">Nos services</a></li>
-									<li><a href="" class="cnav--ul__li">Nos clients</a></li>
-									<li><a href="" class="cnav--ul__li">Nos partenaires</a></li>
-								</ul>
-							</div>
+					<div class="cbox--services">
+						<img src="./public/img/service2.svg" alt="Conseil en communication" class="sm:w-[120px] w-[100px] mx-auto" />
+						<p class="mt-6 text-xl font-bold">Facilitationd’affaires</p>
+						<div class="flex justify-center">
+							<a href="#_" class="btn--segondary hover:underline opacity-80 lg:py-3 lg:px-8">
+								<div class="flex justify-center">
+									<span>En savoir plus</span>
+									<span class="my-auto ml-3">
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</span>
+								</div>
+							</a>
 						</div>
-
-						<div class="d col-span-1 md:ml-16 sm:mt-0 mt-8 hidden sm:block">
-							<div>
-								<h3 class="font-semibold">
-									Infos de contact <br />
-									<p class="h-1 w-6 mt-2 bg-cyellow"></p>
-								</h3>
-								<ul class="mt-4 space-y-2">
-									<li><a href="" class="cnav--ul__li">email@iragisolutions.com</a></li>
-									<li><a href="" class="cnav--ul__li">+243 xx xxxx xxx</a></li>
-									<li><a href="" class="cnav--ul__li">Bukavu - RDC</a></li>
-								</ul>
-							</div>
+					</div>
+					<div class="cbox--services">
+						<img src="./public/img/service3.svg" alt="Conseil en communication" class="sm:w-[67px] w-[100px] mx-auto" />
+						<p class="mt-6 text-xl font-bold">Gestion et renforcement des compétences</p>
+						<div class="flex justify-center">
+							<a href="#_" class="btn--segondary hover:underline opacity-80 lg:py-3 lg:px-8">
+								<div class="flex justify-center">
+									<span>En savoir plus</span>
+									<span class="my-auto ml-3">
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</span>
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="bg-cgray-100">
-			<div class="relative max-w-6xl mx-auto px-3 md:px-6 py-8">
-				<div class="absolute -top-4 right-3 sm:right-6">
-					<button class="text-cblack bg-cyellow p-2" onClick="window.scrollTo(0, 0)">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-						</svg>
-					</button>
-				</div>
-				<div class="mt-0">
-					<p>
-						<span class="text- text-cgray-800 text-sm"> © Copyright 2022 Iragi Solution. All Rights Reserved. Designed by <span class="font-medium underline text-cblack">Sighted Design</span> </span>
-					</p>
+		<section id="sect3">
+			<div class="mw max-w-6xl mx-auto px-3 sm:px-6 py-24">
+				<div class="flex flex-col items-start mx-auto space-y-20 lg:space-y-0 lg:flex-row">
+					<div class="flex flex-col justify-center flex-shrink-0 w-full h-full max-w-lg space-y-5 text-gray-800 lg:max-w-none lg:w-5/12 xl:w-6/12">
+						<div class="max-w-sm">
+							<h1 class="ctitle--h1 md:text-3xl lg:text-4xl xl:text-4xl">Ils nous ont fait confiance</h1>
+							<p class="tex text-cgray-900">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ddelectus aliquid? Cum minus excepturi possimus. Quaerat libero eaque voluptates.</p>
+						</div>
+					</div>
+
+					<div class="max-w-lg lg:max-w-none lg:w-7/12 lg:pl-8 xl:w-6/12">
+						<div class="grid grid-cols-3 text-gray-400 gap-x-12 gap-y-6">
+							<a href="#_" class="flex items-center justify-center hover:text-gray-600">
+								<img class="w-auto fill-current h-10 sm:h-20" src="./public/img/partners/C1.png" alt="" />
+							</a>
+							<a href="#_" class="flex items-center justify-center hover:text-gray-600">
+								<img class="w-auto fill-current h-7 sm:h-28" src="./public/img/partners/C2.png" alt="" />
+							</a>
+							<a href="#_" class="flex items-center justify-center hover:text-gray-600">
+								<img class="w-auto fill-current h-7 sm:h-32" src="./public/img/partners/C3.png" alt="" />
+							</a>
+							<a href="#_" class="flex items-center justify-center hover:text-gray-600">
+								<img class="w-auto fill-current h-7 sm:h-20" src="./public/img/partners/C4.png" alt="" />
+							</a>
+							<a href="#_" class="flex items-center justify-center hover:text-gray-600">
+								<img class="w-auto fill-current h-7 sm:h-20" src="./public/img/partners/C5.png" alt="" />
+							</a>
+							<a href="#_" class="flex items-center justify-center hover:text-gray-600">
+								<img class="w-auto fill-current h-7 sm:h-12" src="./public/img/partners/C6.png" alt="" />
+							</a>
+							<a href="#_" class="flex items-center justify-center hover:text-gray-600">
+								<img class="w-auto fill-current h-7 sm:h-28" src="./public/img/partners/C7.png" alt="" />
+							</a>
+							<a href="#_" class="flex items-center justify-center hover:text-gray-600">
+								<img class="w-auto fill-current h-7 sm:h-16" src="./public/img/partners/C8.png" alt="" />
+							</a>
+							<a href="#_" class="flex items-center justify-center hover:text-gray-600">
+								<img class="w-auto fill-current h-7 sm:h-16" src="./public/img/partners/C9.png" alt="" />
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
+		<div class="contact--form" id="sect4"></div>
+
+		<div class="footer--section"></div>
 	</body>
 </html>
+
+<script type="text/javascript">
+	$(".nav--section").load("./src/components/nav.html #nav--section");
+	$(".footer--section").load("./src/components/footer.html #footer--section");
+	$(".contact--form").load("./src/components/contact__form.html");
+</script>

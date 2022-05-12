@@ -5,6 +5,69 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Services - IRAGI SOLUTIONS</title>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="../public/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../public/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="../public/favicon-16x16.png" />
+		<link rel="manifest" href="../public/site.webmanifest" />
+
+		<link rel="stylesheet" href="../public/css/outputs_styles.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
 	</head>
-	<body></body>
+	<body>
+		<!-- Section 1 -->
+		<section class="bg-white relative lightMode">
+			<div class="nav--section w-full"></div>
+		</section>
+
+		<section class="w-full bg-cgray-100">
+			<div class="box-border flex-grow w-full mx-auto leading-6 px-3 md:px-6 max-w-6xl sm:py-24 py-16">
+				<div class="relative w-full leading-6 text-center lg:flex-grow-0 lg:flex-shrink-0">
+					<p class="mb-2"><span class="text-cgreen text-sm">./home/services</span></p>
+					<h1 class="ctitle--h1 md:text-3xl lg:text-4xl xl:text-4xl">Nos services</h1>
+				</div>
+			</div>
+		</section>
+
+		<section class="w-full bg-cblack-800">
+			<div class="max-w-6xl mx-auto px-3 md:px-6 py-20 sm:py-28 space-y-8 sm:space-y-16 text-left">
+				<div class="md:grid md:grid-cols-4 md:gap-8 w-full">
+					<div class="gri col-span-1 flex justify-items-center">
+						<img src="../public/img/service1.svg" alt="Conseil en communication" class="sm:w-[140px] w-[100px]" />
+					</div>
+					<div class="col-span-3 sm:-ml-16">
+						<h2 class="text text-cgreen font-extrabold text-2xl mb-4 mt-6 sm:mt-0">Falicitation d’affaires</h2>
+						<p class="text-cgray">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</p>
+					</div>
+				</div>
+				<div class="md:grid md:grid-cols-4 md:gap-8 w-full">
+					<div class="gri col-span-1 flex justify-items-center md:-m-6">
+						<img src="../public/img/service2.svg" alt="Conseil en communication" class="sm:w-[180px] w-[130px]" />
+					</div>
+					<div class="col-span-3 sm:-ml-16">
+						<h2 class="text text-cgreen font-extrabold text-2xl mb-4 mt-6 sm:mt-0">Conseil en communication</h2>
+						<p class="text-cgray">De tout ce qui passeeeee ouiiiiiiiii Lorem ipsum dolor sit amet, takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+					</div>
+				</div>
+				<div class="md:grid md:grid-cols-4 md:gap-8 w-full">
+					<div class="gri col-span-1 flex justify-items-center">
+						<img src="../public/img/service3.svg" alt="Conseil en communication" class="sm:w-[130px] w-[110px]" />
+					</div>
+					<div class="col-span-3 sm:-ml-16">
+						<h2 class="text text-cgreen font-extrabold text-2xl mb-4 mt-6 sm:mt-0">Conseil en communication</h2>
+						<p class="text-cgray">Lorem ipsum dolor sit amet, takimata sanctus est Lorem ipsum dolor de la verture de tout ce qui se passe dans la mesure du tout sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="contact--form"></div>
+		<div class="footer--section"></div>
+	</body>
 </html>
+
+<script type="text/javascript">
+	$(".nav--section").load("../src/components/nav.html #nav--section");
+	$(".footer--section").load("../src/components/footer.html #footer--section");
+	$(".contact--form").load("../src/components/contact__form.html");
+</script>
