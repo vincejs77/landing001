@@ -9,7 +9,7 @@
 }
 
 .cfild--input {
-	@apply bg-cyellow w-full py-[9.8px] border-b border-cblack placeholder-cgray-900 placeholder-italic;
+	@apply bg-cyellow w-full mt-3 py-3 border-b border-cblack placeholder-cgray-900 placeholder-italic;
 }
 
 .cfild--input:focus {
