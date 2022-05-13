@@ -24,6 +24,10 @@ body {
 	@apply text-cblack;
 }
 
+.container--section {
+	@apply mx-auto max-w-6xl py-16 px-3 sm:px-6;
+}
+
 .cnav--ul__li {
 	@apply no-underline bg-transparent cursor-pointer opacity-90;
 }

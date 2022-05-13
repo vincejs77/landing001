@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact - IRAGI SOLUTIONS</title>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="../public/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../public/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="../public/favicon-16x16.png" />
+		<link rel="manifest" href="../public/site.webmanifest" />
+
+		<link rel="stylesheet" href="../public/css/outputs_styles.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+	</head>
+	<body>
+		<section class="bg-white relative lightMode">
+			<div class="nav--section w-full bg-white"></div>
+		</section>
+		<section class="bg-cgray-100 mt-24 sm:mt-32">
+			<div class="container--section">
+				<h1 class="text-4xl text-cblack">Nous contacter</h1>
+			</div>
+		</section>
+		<div class="footer--section"></div>
+	</body>
+</html>
+
+<script type="text/javascript">
+	$(".nav--section").load("../src/components/nav.html #nav--section");
+	$(".footer--section").load("../src/components/footer.html #footer--section");
+	$(".contact--form").load("../src/components/contact__form.html");
+</script>
